@@ -27,6 +27,8 @@ else
 	ScreenGui.Parent = game.CoreGui
 end
 
+local UICorner1 = Instance.new("UICorner")
+local UICorner2 = Instance.new("UICorner")
 local backgroundFrame = Instance.new("Frame")
 local tempestButton = Instance.new("TextButton")
 
@@ -38,6 +40,9 @@ backgroundFrame.BorderColor3 = Color3.fromRGB(0, 0, 0)
 backgroundFrame.BorderSizePixel = 0
 backgroundFrame.Position = UDim2.new(0.5, 0, 0.5, 0)
 backgroundFrame.Size = UDim2.new(0, 100, 0, 100)
+
+UICorner1.Parent = backgroundFrame
+UICorner2.Parent = tempestButton
 
 tempestButton.Name = "tempestButton"
 tempestButton.Parent = backgroundFrame

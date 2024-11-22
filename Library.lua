@@ -21,15 +21,14 @@ ProtectGui(ScreenGui)
 ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Global
 if gethui then
 	ScreenGui.Parent = gethui()
-elseif CoreGui:FindFirstChild('RobloxGui') then
-	ScreenGui.Parent = CoreGui:FindFirstChild('RobloxGui')
+elseif game.CoreGui:FindFirstChild('RobloxGui') then
+	ScreenGui.Parent = game.CoreGui:FindFirstChild('RobloxGui')
 else
-	ScreenGui.Parent = CoreGui
+	ScreenGui.Parent = game.CoreGui
 end
 
 local backgroundFrame = Instance.new("Frame")
 local tempestButton = Instance.new("TextButton")
-
 
 backgroundFrame.Name = "backgroundFrame"
 backgroundFrame.Parent = ScreenGui
@@ -37,7 +36,7 @@ backgroundFrame.AnchorPoint = Vector2.new(0.5, 0.5)
 backgroundFrame.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 backgroundFrame.BorderColor3 = Color3.fromRGB(0, 0, 0)
 backgroundFrame.BorderSizePixel = 0
-backgroundFrame.Position = UDim2.new(0.18676123, 0, 0.350785315, 0)
+backgroundFrame.Position = UDim2.new(0.5, 0, 0.5, 0)
 backgroundFrame.Size = UDim2.new(0, 100, 0, 100)
 
 tempestButton.Name = "tempestButton"
@@ -55,16 +54,9 @@ tempestButton.TextScaled = true
 tempestButton.TextSize = 14.000
 tempestButton.TextWrapped = true
 
-local function changeVisibilityUI()
-	local script = Instance.new('LocalScript', backgroundFrame)
-
-	local button = script.Parent.tempestButton
-	
-	button.Activated:Connect(function(player)
-		local frame = script.Parent.Parent.Frame
-		frame.Visible = not frame.Visible
-	end)
-end
+tempestButton.Activated:Connect(function()
+	backgroundFrame.Visible = not backgroundFrame.Visible
+end)
 
 local Toggles = {}
 local Options = {}

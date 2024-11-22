@@ -55,7 +55,7 @@ tempestButton.TextSize = 14.000
 tempestButton.TextWrapped = true
 
 tempestButton.Activated:Connect(function()
-	ScreenGui..Visible = not backgroundFrame.Visible
+	ScreenGui.backgroundPrincipalFrame.Visible = not ScreenGui.backgroundPrincipalFrame.Visible
 end)
 
 local Toggles = {}

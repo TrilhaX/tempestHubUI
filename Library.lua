@@ -55,7 +55,8 @@ tempestButton.TextSize = 14.000
 tempestButton.TextWrapped = true
 
 tempestButton.Activated:Connect(function()
-	backgroundFrame.Visible = not backgroundFrame.Visible
+	local backgroundPrincipalFrame = script.Parent.Parent:GetChildren()[4]
+	backgroundPrincipalFrame.Visible = not backgroundPrincipalFrame.Visible
 end)
 
 local Toggles = {}

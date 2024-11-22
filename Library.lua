@@ -55,7 +55,7 @@ tempestButton.TextSize = 14.000
 tempestButton.TextWrapped = true
 
 tempestButton.Activated:Connect(function()
-	ScreenGui.Frame.Visible = not ScreenGui.Frame.Visible
+	backgroundFrame.Visible = not backgroundFrame.Visible
 end)
 
 local Toggles = {}
@@ -3208,7 +3208,6 @@ function Library:CreateWindow(...)
 		Size = Config.Size,
 		Visible = false,
 		ZIndex = 1,
-		Name = "backgroundPrincipalFrame",
 		Parent = ScreenGui,
 	})
 

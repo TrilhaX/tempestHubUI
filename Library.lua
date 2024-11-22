@@ -55,8 +55,16 @@ tempestButton.TextSize = 14.000
 tempestButton.TextWrapped = true
 
 tempestButton.Activated:Connect(function()
-	local backgroundPrincipalFrame = ScreenGui.Frame
-	backgroundPrincipalFrame.Visible = not backgroundPrincipalFrame.Visible
+    local children = ScreenGui:GetChildren()
+    local lastFrame = nil
+    for _, child in ipairs(children) do
+        if child:IsA("Frame") then
+            lastFrame = child
+        end
+    end
+    if lastFrame then
+        lastFrame.Visible = not lastFrame.Visible
+    end
 end)
 
 local Toggles = {}

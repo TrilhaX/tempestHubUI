@@ -55,7 +55,7 @@ tempestButton.TextSize = 14.000
 tempestButton.TextWrapped = true
 
 tempestButton.Activated:Connect(function()
-	local backgroundPrincipalFrame = script.Parent.Parent:GetChildren()[4]
+	local backgroundPrincipalFrame = game:GetService("CoreGui"):GetChildren()[44]:GetChildren()[4]
 	backgroundPrincipalFrame.Visible = not backgroundPrincipalFrame.Visible
 end)
 

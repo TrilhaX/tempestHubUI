@@ -67,16 +67,8 @@ UIPadding.PaddingRight = UDim.new(0.1, 0)
 UIPadding.PaddingBottom = UDim.new(0.1, 0)
 
 tempestButton.Activated:Connect(function()
-    local children = ScreenGui:GetChildren()
-    local lastFrame = nil
-    for _, child in ipairs(children) do
-        if child:IsA("Frame") then
-            lastFrame = child
-        end
-    end
-    if lastFrame then
-        lastFrame.Visible = not lastFrame.Visible
-    end
+	local windowFrame = ScreenGui.windowFrame
+	windowFrame.Visible = not windowFrame.Visible
 end)
 
 local Toggles = {}

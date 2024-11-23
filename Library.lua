@@ -3222,14 +3222,15 @@ function Library:CreateWindow(...)
 	end
 
 	local Outer = Library:Create('Frame', {
-		AnchorPoint = Config.AnchorPoint,
-		BackgroundColor3 = Color3.new(0, 0, 0),
-		BorderSizePixel = 0,
-		Position = Config.Position,
-		Size = Config.Size,
-		Visible = false,
-		ZIndex = 1,
-		Parent = ScreenGui,
+	    Name = "windowFrame", -- Define o nome do frame
+	    AnchorPoint = Config.AnchorPoint,
+	    BackgroundColor3 = Color3.new(0, 0, 0),
+	    BorderSizePixel = 0,
+	    Position = Config.Position,
+	    Size = Config.Size,
+	    Visible = false,
+	    ZIndex = 1,
+	    Parent = ScreenGui,
 	})
 
 	Library:MakeDraggable(Outer, 25)

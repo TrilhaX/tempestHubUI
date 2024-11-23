@@ -61,10 +61,10 @@ tempestButton.TextSize = 14.000
 tempestButton.TextWrapped = true
 
 UIPadding.Parent = backgroundFrame
-UIPadding.PaddingTop.Scale = 0.1
-UIPadding.PaddingLeft.Scale = 0.1
-UIPadding.PaddingRight.Scale = 0.1
-UIPadding.PaddingBottom.Scale = 0.1
+UIPadding.PaddingTop = UDim.new(0.1, 0)
+UIPadding.PaddingLeft = UDim.new(0.1, 0)
+UIPadding.PaddingRight = UDim.new(0.1, 0)
+UIPadding.PaddingBottom = UDim.new(0.1, 0)
 
 tempestButton.Activated:Connect(function()
     local children = ScreenGui:GetChildren()

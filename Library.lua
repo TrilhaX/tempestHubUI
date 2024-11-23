@@ -31,6 +31,7 @@ local UICorner1 = Instance.new("UICorner")
 local UICorner2 = Instance.new("UICorner")
 local backgroundFrame = Instance.new("Frame")
 local tempestButton = Instance.new("TextButton")
+local UIPadding = Instance.new("UIPadding")
 
 backgroundFrame.Name = "backgroundFrame"
 backgroundFrame.Parent = ScreenGui
@@ -38,7 +39,7 @@ backgroundFrame.AnchorPoint = Vector2.new(0.5, 0.5)
 backgroundFrame.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
 backgroundFrame.BorderColor3 = Color3.fromRGB(0, 0, 0)
 backgroundFrame.BorderSizePixel = 0
-backgroundFrame.Position = UDim2.new(0.5, 0, 0.5, 0)
+backgroundFrame.Position = UDim2.new(0.9, 0, 0.5, 0)
 backgroundFrame.Size = UDim2.new(0, 100, 0, 100)
 
 UICorner1.Parent = backgroundFrame
@@ -47,17 +48,23 @@ UICorner2.Parent = tempestButton
 tempestButton.Name = "tempestButton"
 tempestButton.Parent = backgroundFrame
 tempestButton.AnchorPoint = Vector2.new(0.5, 0.5)
-tempestButton.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+tempestButton.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
 tempestButton.BorderColor3 = Color3.fromRGB(0, 0, 0)
 tempestButton.BorderSizePixel = 0
 tempestButton.Position = UDim2.new(0.5, 0, 0.5, 0)
 tempestButton.Size = UDim2.new(1, 0, 1, 0)
-tempestButton.Font = Enum.Font.SourceSans
+tempestButton.Font = Enum.Font.PermanentMarker
 tempestButton.Text = "Tempest Hub"
 tempestButton.TextColor3 = Color3.fromRGB(75, 0, 130)
 tempestButton.TextScaled = true
 tempestButton.TextSize = 14.000
 tempestButton.TextWrapped = true
+
+UIPadding.Parent = backgroundFrame
+UIPadding.PaddingTop.Scale = 0.1
+UIPadding.PaddingLeft.Scale = 0.1
+UIPadding.PaddingRight.Scale = 0.1
+UIPadding.PaddingBottom.Scale = 0.1
 
 tempestButton.Activated:Connect(function()
     local children = ScreenGui:GetChildren()
